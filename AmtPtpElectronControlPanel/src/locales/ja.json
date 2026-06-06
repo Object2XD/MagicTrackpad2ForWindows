@@ -1,0 +1,119 @@
+{
+  "app": {
+    "title": "Magic Trackpad コントロールパネル"
+  },
+  "aria": {
+    "settingsSections": "設定セクション",
+    "magicTrackpadSettings": "Magic Trackpad 設定",
+    "clickOptionMode": "クリックオプションモード",
+    "batteryLevel": "バッテリー残量"
+  },
+  "brand": {
+    "eyebrow": "コントロールパネル",
+    "title": "Magic Trackpad"
+  },
+  "nav": {
+    "clicking": "クリック",
+    "pointerStop": "ポインター停止",
+    "filters": "入力フィルター",
+    "battery": "バッテリー"
+  },
+  "bridge": {
+    "connected": "ブリッジ接続済み",
+    "preview": "ブリッジプレビューモード",
+    "missing": "コントロールブリッジはまだインストールされていません。設定はプレビューモードで表示されます。"
+  },
+  "header": {
+    "eyebrow": "Apple Precision Touchpad",
+    "title": "Magic Trackpad",
+    "copy": "クリック感、ポインター動作、Bluetooth バッテリー、スタートアップ動作を調整します。"
+  },
+  "buttons": {
+    "windowsSettings": "Windows タッチパッド設定",
+    "update": "更新",
+    "apply": "適用"
+  },
+  "clicking": {
+    "eyebrow": "クリックオプション",
+    "heading": "触覚フィードバック",
+    "silent": "静かなクリック",
+    "macos": "macOS クリックオプション",
+    "disableFeedback": "フィードバック無効",
+    "maximumFeedback": "最大フィードバック",
+    "feedbackDescription": "最大フィードバックは意図的に強く大きなクリック感になります。無効モードでは触覚フィードバックと感圧タッチボタンを完全にオフにします。"
+  },
+  "feedback": {
+    "light": "軽い",
+    "medium": "普通",
+    "firm": "強い"
+  },
+  "battery": {
+    "eyebrow": "Bluetooth のみ",
+    "heading": "バッテリー",
+    "waiting": "ブリッジ待機中",
+    "checking": "バッテリーを確認中...",
+    "unavailable": "バッテリーを取得できません",
+    "missingPercentage": "バッテリー応答にパーセンテージが含まれていません",
+    "bluetooth": "Bluetooth バッテリー",
+    "outsideRange": "バッテリー応答が 0-100% の範囲外です"
+  },
+  "startup": {
+    "eyebrow": "トレイ",
+    "heading": "ログイン時に起動",
+    "description": "サインイン後も Windows トレイからコントロールパネルを使えるようにします。",
+    "updated": "スタートアップを更新しました",
+    "enabled": "ログイン時にアプリを起動します。",
+    "disabled": "ログイン時にアプリを起動しません。"
+  },
+  "tray": {
+    "openSettings": "設定を開く",
+    "updateBattery": "バッテリーを更新",
+    "windowsTouchpadSettings": "Windows タッチパッド設定",
+    "quit": "終了",
+    "batteryPrefix": "バッテリー",
+    "batteryUnavailable": "バッテリーを取得できません",
+    "batteryUpdateFailed": "バッテリー更新に失敗しました",
+    "batteryPercentageUnavailable": "バッテリー残量を取得できません"
+  },
+  "pointerStop": {
+    "eyebrow": "指を離したとき",
+    "heading": "ポインター停止オプション",
+    "doNothing": "何もしない",
+    "doNothingDescription": "ポインター移動を通常どおり続けます。",
+    "pressure": "圧力で停止",
+    "pressurePrefix": "圧力が",
+    "pressureSuffix": "以下なら停止します。0 がおすすめです。",
+    "size": "タッチサイズで停止",
+    "sizePrefix": "タッチ領域サイズが",
+    "sizeSuffix": "以下なら停止します。7 がおすすめです。"
+  },
+  "filters": {
+    "eyebrow": "その他のオプション",
+    "heading": "入力フィルタリング",
+    "ignoreNearFingers": "浮いている指を無視",
+    "ignoreNearFingersDescription": "トラックパッド面に触れていない指からの入力を無視します。",
+    "ignoreButtonFinger": "クリックしている指を無視",
+    "ignoreButtonFingerDescription": "親指でクリックしながら別の指でポインターを動かす場合に便利です。",
+    "palmRejection": "パームリジェクション",
+    "palmRejectionDescription": "手を表面近くに置いたときの誤入力を減らします。"
+  },
+  "status": {
+    "ready": "準備完了",
+    "readyDetail": "ブリッジが利用可能なときに変更を適用します。",
+    "loading": "読み込み中",
+    "loadingDetail": "ブリッジから現在の設定を読み込んでいます。",
+    "loadedDetail": "現在のブリッジ設定を読み込みました。",
+    "previewMode": "プレビューモード",
+    "previewDetail": "ブリッジが利用可能になるまで安全な既定値を使用します。",
+    "applying": "適用中",
+    "applyingDetail": "設定をブリッジへ送信しています。",
+    "applied": "適用済み",
+    "appliedDetail": "ブリッジが設定を受け付けました。",
+    "couldNotApply": "適用できませんでした",
+    "applyRejected": "ブリッジが設定を受け付けませんでした。",
+    "openedSettings": "設定を開きました",
+    "couldNotOpenSettings": "設定を開けませんでした",
+    "windowsSettingsCompleted": "Windows タッチパッド設定のリクエストが完了しました。",
+    "bridgeMissingSettingsOpened": "ブリッジが未インストールのため、Windows タッチパッド設定を直接開きました。"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "app": {
+    "title": "Magic Trackpad Control Panel"
+  },
+  "aria": {
+    "settingsSections": "Settings sections",
+    "magicTrackpadSettings": "Magic Trackpad settings",
+    "clickOptionMode": "Click option mode",
+    "batteryLevel": "Battery level"
+  },
+  "brand": {
+    "eyebrow": "Control Panel",
+    "title": "Magic Trackpad"
+  },
+  "nav": {
+    "clicking": "Clicking",
+    "pointerStop": "Pointer Stop",
+    "filters": "Input Filters",
+    "battery": "Battery"
+  },
+  "bridge": {
+    "connected": "Bridge connected",
+    "preview": "Bridge preview mode",
+    "missing": "The control bridge is not installed yet. Settings are shown in preview mode."
+  },
+  "header": {
+    "eyebrow": "Apple Precision Touchpad",
+    "title": "Magic Trackpad",
+    "copy": "Adjust click feel, pointer behavior, Bluetooth battery, and startup behavior."
+  },
+  "buttons": {
+    "windowsSettings": "Windows Touchpad Settings",
+    "update": "Update",
+    "apply": "Apply"
+  },
+  "clicking": {
+    "eyebrow": "Click Options",
+    "heading": "Haptic Feedback",
+    "silent": "Silent clicking",
+    "macos": "macOS Click Options",
+    "disableFeedback": "Disable Feedback",
+    "maximumFeedback": "Maximum Feedback",
+    "feedbackDescription": "Maximum feedback is intentionally clicky and loud. Disable mode turns off haptic feedback and the force touch button completely."
+  },
+  "feedback": {
+    "light": "Light",
+    "medium": "Medium",
+    "firm": "Firm"
+  },
+  "battery": {
+    "eyebrow": "Bluetooth Only",
+    "heading": "Battery",
+    "waiting": "Waiting for bridge",
+    "checking": "Checking battery...",
+    "unavailable": "Battery unavailable",
+    "missingPercentage": "Battery response did not include a percentage",
+    "bluetooth": "Bluetooth battery",
+    "outsideRange": "Battery response was outside 0-100%"
+  },
+  "startup": {
+    "eyebrow": "Tray",
+    "heading": "Launch at Login",
+    "description": "Keep the control panel available from the Windows tray after sign-in.",
+    "updated": "Startup updated",
+    "enabled": "The app will open at login.",
+    "disabled": "The app will not open at login."
+  },
+  "tray": {
+    "openSettings": "Open Settings",
+    "updateBattery": "Update Battery",
+    "windowsTouchpadSettings": "Windows Touchpad Settings",
+    "quit": "Quit",
+    "batteryPrefix": "Battery",
+    "batteryUnavailable": "Battery unavailable",
+    "batteryUpdateFailed": "Battery update failed",
+    "batteryPercentageUnavailable": "Battery percentage unavailable"
+  },
+  "pointerStop": {
+    "eyebrow": "When You Lift Your Finger",
+    "heading": "Stop Pointer Options",
+    "doNothing": "Do nothing",
+    "doNothingDescription": "Let pointer movement continue normally.",
+    "pressure": "Stop by pressure",
+    "pressurePrefix": "Stop if pressure is less than or equal to",
+    "pressureSuffix": "units. 0 is a good value.",
+    "size": "Stop by touch size",
+    "sizePrefix": "Stop if touch area size is less than or equal to",
+    "sizeSuffix": "units. 7 is a good value."
+  },
+  "filters": {
+    "eyebrow": "Other Options",
+    "heading": "Input Filtering",
+    "ignoreNearFingers": "Ignore hovering fingers",
+    "ignoreNearFingersDescription": "Ignore input from fingers not touching the trackpad surface.",
+    "ignoreButtonFinger": "Ignore click finger",
+    "ignoreButtonFingerDescription": "Useful when your thumb clicks while another finger moves the pointer.",
+    "palmRejection": "Palm Rejection",
+    "palmRejectionDescription": "Reduce accidental input while resting your hand near the surface."
+  },
+  "status": {
+    "ready": "Ready",
+    "readyDetail": "Changes apply through the bridge when available.",
+    "loading": "Loading",
+    "loadingDetail": "Reading current settings from the bridge.",
+    "loadedDetail": "Current bridge settings loaded.",
+    "previewMode": "Preview mode",
+    "previewDetail": "Using safe defaults until the bridge is available.",
+    "applying": "Applying",
+    "applyingDetail": "Sending settings to the bridge.",
+    "applied": "Applied",
+    "appliedDetail": "Settings were accepted by the bridge.",
+    "couldNotApply": "Could not apply",
+    "applyRejected": "The bridge did not accept the settings.",
+    "openedSettings": "Opened Settings",
+    "couldNotOpenSettings": "Could not open Settings",
+    "windowsSettingsCompleted": "Windows Touchpad Settings request completed.",
+    "bridgeMissingSettingsOpened": "The bridge is not installed yet, so Windows Touchpad Settings were opened directly."
+  }
+}

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Trackpad Control Panel</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="system-settings-frame" aria-label="Magic Trackpad settings window" data-i18n-attr="aria-label:aria.magicTrackpadSettings">
+      <aside class="system-sidebar" aria-label="Control panel pages" data-i18n-attr="aria-label:aria.settingsSections">
+        <nav class="sidebar-nav" aria-label="Magic Trackpad pages">
+          <a class="sidebar-row active" href="#clicking" data-page="clicking">
+            <span class="sidebar-icon icon-trackpad" aria-hidden="true"></span>
+            <span>クリック</span>
+          </a>
+          <a class="sidebar-row" href="#pointer-stop" data-page="pointer-stop">
+            <span class="sidebar-icon icon-focus" aria-hidden="true"></span>
+            <span>ポインター停止</span>
+          </a>
+          <a class="sidebar-row" href="#filters" data-page="filters">
+            <span class="sidebar-icon icon-privacy" aria-hidden="true"></span>
+            <span>入力フィルター</span>
+          </a>
+          <a class="sidebar-row" href="#battery" data-page="battery">
+            <span class="sidebar-icon icon-notification" aria-hidden="true"></span>
+            <span>バッテリー</span>
+          </a>
+          <a class="sidebar-row" href="#startup" data-page="startup">
+            <span class="sidebar-icon icon-users" aria-hidden="true"></span>
+            <span>トレイと起動</span>
+          </a>
+          <a class="sidebar-row" href="#windows-settings" data-page="windows-settings">
+            <span class="sidebar-icon icon-keyboard" aria-hidden="true"></span>
+            <span>Windows 設定</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-status">
+          <span class="status-dot"></span>
+          <span id="bridgeStatus" data-i18n="bridge.preview">Bridge preview mode</span>
+        </div>
+      </aside>
+
+      <div class="settings-content">
+        <header class="settings-toolbar">
+          <div aria-hidden="true"></div>
+          <div>
+            <h1 id="pageTitle">クリック</h1>
+            <p id="pageSubtitle">Magic Trackpad のクリック感と触覚フィードバックを調整します。</p>
+          </div>
+        </header>
+
+        <main class="trackpad-pane" aria-label="Magic Trackpad settings" data-i18n-attr="aria-label:aria.magicTrackpadSettings">
+          <section
+            class="settings-page settings-list"
+            id="clicking"
+            data-page-panel="clicking"
+            data-title="クリック"
+            data-subtitle="Magic Trackpad のクリック感と触覚フィードバックを調整します。"
+            aria-labelledby="clickingHeading"
+          >
+            <div class="settings-section-heading">
+              <p data-i18n="clicking.eyebrow">Click Options</p>
+              <h2 id="clickingHeading" data-i18n="clicking.heading">Haptic Feedback</h2>
+            </div>
+
+            <fieldset class="settings-row segmented-row" aria-label="Haptic mode">
+              <legend>触覚モード</legend>
+              <div class="segmented">
+                <label>
+                  <input type="radio" name="clickMode" value="disable-feedback">
+                  <span>無効</span>
+                </label>
+                <label>
+                  <input type="radio" name="clickMode" value="macos" checked>
+                  <span>標準</span>
+                </label>
+                <label>
+                  <input type="radio" name="clickMode" value="maximum-feedback">
+                  <span>最大</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="settings-row segmented-row" aria-labelledby="feedbackHeading">
+              <legend id="feedbackHeading">フィードバックの強さ</legend>
+              <p data-i18n="clicking.feedbackDescription">Maximum feedback is intentionally clicky and loud. Disable mode turns off haptic feedback and the force touch button completely.</p>
+              <div class="segmented" role="radiogroup" aria-describedby="feedbackLabel">
+                <label>
+                  <input type="radio" name="feedbackChoice" value="0">
+                  <span data-i18n="feedback.light">Light</span>
+                </label>
+                <label>
+                  <input type="radio" name="feedbackChoice" value="1" checked>
+                  <span data-i18n="feedback.medium">Medium</span>
+                </label>
+                <label>
+                  <input type="radio" name="feedbackChoice" value="2">
+                  <span data-i18n="feedback.firm">Firm</span>
+                </label>
+              </div>
+              <input id="feedback" type="hidden" value="1">
+              <span class="visually-hidden" id="feedbackLabel">Medium</span>
+            </fieldset>
+
+            <label class="settings-row switch-row">
+              <span class="row-copy">
+                <strong data-i18n="clicking.silent">Silent clicking</strong>
+              </span>
+              <span class="row-control">
+                <input id="silentClicking" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+              </span>
+            </label>
+          </section>
+
+          <section
+            class="settings-page settings-list"
+            id="pointer-stop"
+            data-page-panel="pointer-stop"
+            data-title="ポインター停止"
+            data-subtitle="指を離したときのポインター動作を選択します。"
+            aria-labelledby="pointerStopHeading"
+            hidden
+          >
+            <div class="settings-section-heading">
+              <p data-i18n="pointerStop.eyebrow">When You Lift Your Finger</p>
+              <h2 id="pointerStopHeading" data-i18n="pointerStop.heading">Stop Pointer Options</h2>
+            </div>
+
+            <fieldset class="choice-card-list" aria-labelledby="pointerStopHeading">
+              <label class="choice-card">
+                <input type="radio" name="stopMode" value="do-nothing">
+                <span class="choice-card-body">
+                  <span class="choice-card-title" data-i18n="pointerStop.doNothing">Do nothing</span>
+                  <span class="choice-card-description" data-i18n="pointerStop.doNothingDescription">Let pointer movement continue normally.</span>
+                </span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="stopMode" value="pressure" checked>
+                <span class="choice-card-body">
+                  <span class="choice-card-title" data-i18n="pointerStop.pressure">Stop by pressure</span>
+                  <span class="choice-card-description">
+                    <span data-i18n="pointerStop.pressurePrefix">Stop if pressure is less than or equal to</span>
+                    <input id="stopPressure" class="inline-number" type="number" value="0" min="0" max="255">
+                    <span data-i18n="pointerStop.pressureSuffix">units. 0 is a good value.</span>
+                  </span>
+                </span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="stopMode" value="size">
+                <span class="choice-card-body">
+                  <span class="choice-card-title" data-i18n="pointerStop.size">Stop by touch size</span>
+                  <span class="choice-card-description">
+                    <span data-i18n="pointerStop.sizePrefix">Stop if touch area size is less than or equal to</span>
+                    <input id="stopSize" class="inline-number" type="number" value="7" min="0" max="255">
+                    <span data-i18n="pointerStop.sizeSuffix">units. 7 is a good value.</span>
+                  </span>
+                </span>
+              </label>
+            </fieldset>
+          </section>
+
+          <section
+            class="settings-page settings-list"
+            id="filters"
+            data-page-panel="filters"
+            data-title="入力フィルター"
+            data-subtitle="通常の操作を保ちながら、誤入力を減らします。"
+            aria-labelledby="filtersHeading"
+            hidden
+          >
+            <div class="settings-section-heading">
+              <p data-i18n="filters.eyebrow">Other Options</p>
+              <h2 id="filtersHeading" data-i18n="filters.heading">Input Filtering</h2>
+            </div>
+
+            <label class="settings-row switch-row">
+              <span class="row-copy">
+                <strong data-i18n="filters.ignoreNearFingers">Ignore hovering fingers</strong>
+                <small data-i18n="filters.ignoreNearFingersDescription">Ignore input from fingers not touching the trackpad surface.</small>
+              </span>
+              <span class="row-control">
+                <input id="ignoreNearFingers" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+              </span>
+            </label>
+            <label class="settings-row switch-row">
+              <span class="row-copy">
+                <strong data-i18n="filters.ignoreButtonFinger">Ignore click finger</strong>
+                <small data-i18n="filters.ignoreButtonFingerDescription">Useful when your thumb clicks while another finger moves the pointer.</small>
+              </span>
+              <span class="row-control">
+                <input id="ignoreButtonFinger" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+              </span>
+            </label>
+            <label class="settings-row switch-row">
+              <span class="row-copy">
+                <strong data-i18n="filters.palmRejection">Palm Rejection</strong>
+                <small data-i18n="filters.palmRejectionDescription">Reduce accidental input while resting your hand near the surface.</small>
+              </span>
+              <span class="row-control">
+                <input id="palmRejection" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+              </span>
+            </label>
+          </section>
+
+          <section
+            class="settings-page settings-list"
+            id="battery"
+            data-page-panel="battery"
+            data-title="バッテリー"
+            data-subtitle="ブリッジから取得した Bluetooth バッテリー情報を確認します。"
+            aria-labelledby="batteryHeading"
+            hidden
+          >
+            <div class="settings-row">
+              <div class="row-copy">
+                <p data-i18n="battery.eyebrow">Bluetooth Only</p>
+                <h2 id="batteryHeading" data-i18n="battery.heading">Battery</h2>
+              </div>
+              <div class="row-control">
+                <button class="small-button" id="updateBattery" type="button" data-i18n="buttons.update">Update</button>
+              </div>
+            </div>
+            <div class="settings-row battery-meter" aria-live="polite">
+              <div class="battery-visual" role="img" aria-label="Battery level" data-i18n-attr="aria-label:aria.batteryLevel">
+                <div class="battery-shell">
+                  <div class="battery-level" id="batteryLevel"></div>
+                </div>
+                <span class="battery-nub" aria-hidden="true"></span>
+              </div>
+              <strong id="batteryValue">?</strong>
+              <span id="batteryCaption" data-i18n="battery.waiting">Waiting for bridge</span>
+            </div>
+          </section>
+
+          <section
+            class="settings-page settings-list"
+            id="startup"
+            data-page-panel="startup"
+            data-title="トレイと起動"
+            data-subtitle="Windows サインイン後にコントロールパネルを使えるようにします。"
+            aria-labelledby="startupHeading"
+            hidden
+          >
+            <label class="settings-row switch-row">
+              <span class="row-copy">
+                <p data-i18n="startup.eyebrow">Tray</p>
+                <strong id="startupHeading" data-i18n="startup.heading">Launch at Login</strong>
+                <small data-i18n="startup.description">Keep the control panel available from the Windows tray after sign-in.</small>
+              </span>
+              <span class="row-control">
+                <input id="launchAtLogin" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+              </span>
+            </label>
+          </section>
+
+          <section
+            class="settings-page settings-list"
+            id="windows-settings"
+            data-page-panel="windows-settings"
+            data-title="Windows 設定"
+            data-subtitle="OS 側のタッチパッド設定が必要な場合に開きます。"
+            aria-labelledby="windowsSettingsHeading"
+            hidden
+          >
+            <div class="settings-row">
+              <div class="row-copy">
+                <h2 id="windowsSettingsHeading">Windows タッチパッド設定</h2>
+                <p>Magic Trackpad ブリッジの範囲外にある Windows 側の設定を開きます。</p>
+              </div>
+              <div class="row-control">
+                <button class="secondary-button" id="openWindowsSettings" type="button" data-i18n="buttons.windowsSettings">Windows Touchpad Settings</button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="bottom-action-area">
+          <div class="save-message">
+            <strong id="saveState" data-i18n="status.ready">Ready</strong>
+            <span id="saveDetail" data-i18n="status.readyDetail">Changes apply through the bridge when available.</span>
+          </div>
+          <div class="bottom-actions">
+            <button class="apply-button" id="applySettings" type="button" data-i18n="buttons.apply">Apply</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

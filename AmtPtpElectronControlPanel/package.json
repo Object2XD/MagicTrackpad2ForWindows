@@ -1,0 +1,70 @@
+{
+  "name": "amt-ptp-electron-control-panel",
+  "version": "0.1.0",
+  "description": "Electron control panel shell for Magic Trackpad 2 for Windows.",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis",
+    "pack": "electron-builder --dir",
+    "pack:capture": "electron-builder --dir -c.win.requestedExecutionLevel=asInvoker",
+    "capture:current": "node scripts/capture-current-screen.js"
+  },
+  "keywords": [
+    "magic-trackpad",
+    "electron",
+    "windows"
+  ],
+  "author": "Magic Trackpad 2 for Windows contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^26.8.1",
+    "pngjs": "^7.0.0"
+  },
+  "build": {
+    "appId": "io.github.imbushuo.magictrackpad.controlpanel",
+    "productName": "Magic Trackpad Control Panel",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "!assets/icons/app-icon-source.png",
+      "!assets/icons/build-icon.js",
+      "!assets/icons/build-tray-icons.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../AmtPtpControlBridge/bin/Release/",
+        "to": "AmtPtpControlBridge",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "asar": true,
+    "win": {
+      "icon": "assets/icons/app.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Magic Trackpad Control Panel"
+    }
+  }
+}
